@@ -11,15 +11,14 @@
 
 ## 如何安装
 
-1. 在 Chrome 浏览器中安装 Tampermonkey。
-2. [点击这里安装脚本](https://raw.githubusercontent.com/Eurus07e/NJU-Course-Grabber/main/nju-course-grabber.user.js)，在 Tampermonkey 页面中确认安装。（或在 Tampermonkey 中点击 “添加新脚本” 并复制粘贴...）
-3. 登录 <https://xk.nju.edu.cn/>，选择正确的选课轮次并进入课程列表。
-4. 先在选课平台中收藏目标教学班。
-5. 点击面板中的“读取收藏”，选择需要的课程，点击“开始”。
+1. 在 Chrome 浏览器中安装 [Tampermonkey](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)。
+2. [安装脚本](https://raw.githubusercontent.com/Eurus07e/NJU-Course-Grabber/main/nju-course-grabber.user.js)。（或在 Tampermonkey 中点击 “添加新脚本” 并复制粘贴...）
+3. 登录选课网站 <https://xk.nju.edu.cn/>，在选课平台中收藏目标教学班。
+4. 点击面板中的“读取收藏”，选择需要的课程，点击“开始”。
 
 ## 注意事项
 
 - 必须保持电脑开机、浏览器页面打开且登录状态有效；电脑休眠、页面关闭或登录过期后或无法继续运行。
 - 平台页面或接口发生变化时，脚本可能需要更新。
 
-
+## 如果有用就留个 STAR 吧～
