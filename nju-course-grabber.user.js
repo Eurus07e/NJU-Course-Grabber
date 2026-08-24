@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NJU 补选助手（收藏课程）
 // @namespace    local.codex.nju
-// @version      0.3.1
+// @version      0.3.2
 // @description  在南京大学本科选课平台中轮询本人勾选的收藏课程，成功后自动停止该课程。
 // @match        https://xk.nju.edu.cn/xsxkapp/sys/xsxkapp/*default/grablessons.do*
 // @downloadURL  https://raw.githubusercontent.com/Eurus07e/NJU-Course-Grabber/main/nju-course-grabber.user.js
@@ -528,6 +528,11 @@
     ui.interval.value = String(intervalMs());
   }
 
+  function sanitizeIntervalInput() {
+    const digits = ui.interval.value.replace(/\D/g, "");
+    if (digits !== ui.interval.value) ui.interval.value = digits;
+  }
+
   function scheduleNext(runId) {
     if (!isRunActive(runId)) return;
     const baseDelay = intervalMs() + Math.floor(Math.random() * 500);
@@ -888,7 +893,7 @@
       <div class="status" role="status" aria-live="polite" data-type="ready">等待读取收藏课程</div>
       <div class="controls">
         <button type="button" class="load">读取收藏</button>
-        <label class="interval-wrap"><input class="interval" type="number" min="${MIN_INTERVAL_MS}" step="100" value="${DEFAULT_INTERVAL_MS}">ms</label>
+        <label class="interval-wrap"><input class="interval" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" aria-label="检查间隔（毫秒）" value="${DEFAULT_INTERVAL_MS}">ms</label>
       </div>
       <div class="list"></div>
       <div class="actions"><button type="button" class="start">开始</button><button type="button" class="stop" disabled>停止</button></div>
@@ -921,8 +926,8 @@
       host.remove();
     });
     ui.load.addEventListener("click", loadFavorites);
+    ui.interval.addEventListener("input", sanitizeIntervalInput);
     ui.interval.addEventListener("blur", normalizeIntervalInput);
-    ui.interval.addEventListener("change", normalizeIntervalInput);
     ui.start.addEventListener("click", start);
     ui.stop.addEventListener("click", () => stop());
     setupPanelMotion();
