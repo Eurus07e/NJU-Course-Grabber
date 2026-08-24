@@ -1,6 +1,7 @@
 # NJU 补选助手
 
 这是一个用于南京大学本科选课平台的 Tampermonkey 单文件脚本。
+
 ## 能做什么
 
 - 读取当前轮次的收藏课程，并自动抢课。
@@ -8,23 +9,17 @@
 
 脚本只会发起选课操作，不包含退课、换课或取消收藏功能。
 
-## 安装
+## 如何安装
 
 1. 在浏览器中安装 Tampermonkey。
-2. [点击这里安装脚本](https://raw.githubusercontent.com/Eurus07e/NJU-Course-Grabber/main/nju-course-grabber.user.js)，在 Tampermonkey 页面中确认安装。
+2. [点击这里安装脚本](https://raw.githubusercontent.com/Eurus07e/NJU-Course-Grabber/main/nju-course-grabber.user.js)，在 Tampermonkey 页面中确认安装。（或在 Tampermonkey 中点击 “添加新脚本” 并复制粘贴...）
 3. 登录 <https://xk.nju.edu.cn/>，选择正确的选课轮次并进入课程列表。
 4. 先在选课平台中收藏目标教学班。
 5. 点击面板中的“读取收藏”，选择需要的课程，点击“开始”。
-
-
 
 ## 注意事项
 
 - 必须保持电脑开机、浏览器页面打开且登录状态有效；电脑休眠、页面关闭或登录过期后无法继续运行。
 - 平台页面或接口发生变化时，脚本可能需要更新。
 
-## 本地语法检查
 
-```sh
-node --check nju-course-grabber.user.js
-```
