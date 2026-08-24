@@ -19,11 +19,10 @@
 ## 安装
 
 1. 在浏览器中安装 Tampermonkey。
-2. 打开 `nju-course-grabber.user.js`，复制全部内容。
-3. 在 Tampermonkey 中新建脚本，替换编辑器里的默认内容并保存。
-4. 登录 <https://xk.nju.edu.cn/>，选择正确的选课轮次并进入课程列表。
-5. 先在选课平台中收藏目标教学班。
-6. 点击面板中的“读取收藏”，取消不需要的课程，再点击“开始”。
+2. [点击这里安装脚本](https://raw.githubusercontent.com/Eurus07e/NJU-Course-Grabber/main/nju-course-grabber.user.js)，在 Tampermonkey 页面中确认安装。
+3. 登录 <https://xk.nju.edu.cn/>，选择正确的选课轮次并进入课程列表。
+4. 先在选课平台中收藏目标教学班。
+5. 点击面板中的“读取收藏”，取消不需要的课程，再点击“开始”。
 
 ## 运行规则
 

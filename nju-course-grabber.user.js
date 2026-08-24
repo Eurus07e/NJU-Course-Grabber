@@ -4,6 +4,8 @@
 // @version      0.3.1
 // @description  在南京大学本科选课平台中轮询本人勾选的收藏课程，成功后自动停止该课程。
 // @match        https://xk.nju.edu.cn/xsxkapp/sys/xsxkapp/*default/grablessons.do*
+// @downloadURL  https://raw.githubusercontent.com/Eurus07e/NJU-Course-Grabber/main/nju-course-grabber.user.js
+// @updateURL    https://raw.githubusercontent.com/Eurus07e/NJU-Course-Grabber/main/nju-course-grabber.user.js
 // @grant        unsafeWindow
 // @run-at       document-idle
 // ==/UserScript==
